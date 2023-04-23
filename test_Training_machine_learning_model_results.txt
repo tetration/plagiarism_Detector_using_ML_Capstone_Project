@@ -1,0 +1,9 @@
+    accuracy                           0.92        92                    macro avg       0.96      0.82      0.87        92
+weighted avg       0.93      0.92      0.92        92
+
+PS C:\Users\Rafae\Downloads\TCC Artigos de Referencia\plagiarism_Detector_using_ML_Capstone_Project\IR-Plag-Dataset> 
+      python .\train_model.py
+   macro avg       0.96      0.82      0.87        92
+weighted avg       0.93      0.92      0.92        92
+
+PS C:\Users\Rafae\Downloads\TCC Artigos de Referencia\plagiarism_Detector_using_ML_Capstone_Project\IR-Plag-Dataset>
