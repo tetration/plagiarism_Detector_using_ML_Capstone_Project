@@ -10,8 +10,12 @@ def index():
     if request.method == 'POST':
         code = request.form['code']
         prediction = model.predict([code])[0]
-        print(prediction)
-        result = "Plagiarized" if prediction == 1 else "Non-plagiarized"
+        probability = model.predict_proba([code])[0]
+        accuracy_percentage = round(max(probability) * 100, 2) 
+        if prediction == 1:
+            result = f"\n We predicted the possibility of this code being Plagiarized with {accuracy_percentage}% accuracy."
+        else:
+            result = f"\n We predicted the possibility of this code being Non-plagiarized with {accuracy_percentage}% accuracy."
         print(result)
         return render_template('index.html', result=result)
     return render_template('index.html')
