@@ -48,33 +48,6 @@ def compare_with_folder(code, folder_path,original_filename):
                         print("Error", codeFile.path, " is not a file")
     return similarities
 
-
-def compare_with_folder_Original(code, folder_path,original_dir):
-    similarities = []
-    code_name = os.path.basename(code)
-    for level in os.listdir(folder_path):
-        level_dir = os.path.join(folder_path, level)
-        if os.path.isdir(level_dir):
-            print('level_dir',level_dir)
-            for filename in os.listdir(level_dir):
-                file_path = os.path.join(level_dir, filename)
-                with open(file_path, 'r') as f:
-                    other_code = f.read()
-                    similarity = compare_codes(code, other_code)
-                    similarities.append((similarity, code_name, filename))
-    return similarities
-
-def compare_with_folder1(code, folder_path):
-    similarities = []
-    with os.scandir(folder_path) as entries:
-        for entry in entries:
-            if entry.is_file():
-                file_path = os.path.join(folder_path, entry.name)
-                with open(file_path, 'r') as f:
-                    other_code = f.read()
-                    similarity = compare_codes(code, other_code)
-                    similarities.append(similarity)
-    return similarities
 # Main code
 dataset_dir = 'IR-Plag-Dataset'
 results = []
