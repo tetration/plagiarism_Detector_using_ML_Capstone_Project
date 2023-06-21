@@ -1,0 +1,13 @@
+Calcular dois códigos e a similaridade entre eles.
+
+Descritor de texto completo usando transformer usando algo moderno
+
+SVD verificar depois
+
+
+- Divisão do dataset entre Treino, validação e teste
+e deixar um pedaço do dataset desconhecido
+
+- Divisão do dataset entre Treino, validação e teste na hora de treinar modelo
+
+https://www.freecodecamp.org/news/advanced-topic-modeling-how-to-use-svd-nmf-in-python/
